@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-image: url("./images/background.jpg");
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cv_box {
+  display: flex;
+  width: 800px;
+  margin: 50px auto;
+  background: #accbe1;
+  padding: 10px;
+}
+
+.cv_box .cv_left {
+  width: 35%;
+  background: #26252d;
+}
+
+.cv_box .cv_left .cv_image {
+  width: 100%;
+}
+
+.cv_box .cv_left .cv_image img {
+  width: 100%;
+  display: block;
+}
+
+.cv_box .cv_title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+  letter-spacing: 4px;
+}
+
+.cv_box .cv_left .cv_info {
+  color: #84838b;
+}
+
+.cv_box .cv_left .cv_bottom {
+  padding: 20px 30px;
+}
+
+.cv_box .cv_item {
+  padding: 20px 0;
+  border-bottom: 1px solid #0175b2;
+}
+
+.cv_box .cv_item:last-child {
+  border-bottom: 0;
+}
+
+.cv_box .cv_left .cv_namerole {
+  display: none;
+}
+
+.cv_box .cv_namerole .name {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 4px;
+}
+
+.cv_box .cv_left .cv_namerole .role {
+  color: #c9c9cc;
+}
+
+.cv_box .cv_left .cv_contact .cv_info:last-child {
+  margin-top: 10px;
+}
+
+.cv_box .cv_left .cv_contact .cv_subtitle {
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.cv_box .cv_left .cv_skills .skills_list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.cv_box .cv_left .cv_skills .skills_list .skills_bar p {
+  position: relative;
+  width: 125px;
+  height: 20px;
+  background: #fff;
+}
+
+.cv_box .cv_left .cv_skills .skills_list .skills_bar p span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #5ec7ad;
+  width: 100%;
+  height: 100%;
+}
+
+.cv_box .cv_right {
+  width: 65%;
+  padding: 20px 40px;
+  color: #26252d;
+}
+
+.cv_box .cv_right .cv_namerole .name {
+  color: #26252d;
+  font-size: 32px;
+}
+
+.cv_box .cv_right .cv_namerole .role {
+  color: #26252d;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.cv_box .cv_right .cv_item .cv_title {
+  color: #26252d;
+}
+
+.cv_box .cv_right .cv_data {
+  display: flex;
+}
+
+.cv_box .cv_right .cv_data .year {
+  padding-right: 35px;
+  width: 115px;
+  position: relative;
+}
+
+.cv_box .cv_right .cv_data .content {
+  padding-left: 35px;
+  margin-bottom: 20px;
+  width: calc(100% - 115px);
+}
+
+.cv_box .cv_right .cv_data .year:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border: 1px solid #26252d;
+  border-radius: 50%;
+}
+
+.cv_box .cv_right .cv_data .year:after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 4px;
+  width: 3px;
+  height: 90%;
+  background: #0175b2;
+}
+
+.cv_box .cv_right .cv_data:last-child .year:after {
+  display: none;
+}
+
+.cv_box .cv_right .cv_social .cv_info {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.cv_box .cv_right .cv_social .social .social_icon {
+  font-size: 38px;
+  color: #000000;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.social_data {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .cv_box .cv_right .cv_namerole {
+    display: none;
+  }
+  .cv_box .cv_left .cv_namerole {
+    display: block;
+  }
+  .cv_box {
+    width: 95%;
+    margin: 10px auto;
+    flex-direction: column;
+  }
+  .cv_box .cv_left,
+  .cv_box .cv_right {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .cv_box .cv_right {
+    padding: 20px 30px;
+  }
+  .cv_box .cv_right .cv_data {
+    flex-direction: column;
+  }
+  .cv_box .cv_right .cv_data .year {
+    padding: 0;
+    margin-bottom: 5px;
+    width: 100%;
+    color: #0162b2;
+  }
+  .cv_box .cv_right .cv_data .year:before,
+  .cv_box .cv_right .cv_data .year:after {
+    display: none;
+  }
+  .cv_box .cv_right .cv_data .content {
+    width: 100%;
+    padding: 0;
+  }
+  .cv_box .cv_right .cv_social .social .social_icon {
+    font-size: 24px;
+  }
+}
